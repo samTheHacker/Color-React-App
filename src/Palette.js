@@ -21,11 +21,13 @@ class Palette extends Component {
   }
 
   render() {
-    const { colors, paletteName, emoji } = this.props.palette;
-    const { level, format } = this.state;
+    const { colors, paletteName, emoji } = this.props.palette; //Shorten props
+    const { level, format } = this.state; //Shorten states
+
     const colorBoxes = colors[level].map(color => (
       <ColorBox background={color[format]} name={color.name} key={color.id} />
-    ));
+    )); //Loop and return all colors in array
+
     return (
       <div className="Palette">
         <Navbar
