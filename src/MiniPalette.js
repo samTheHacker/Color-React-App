@@ -12,7 +12,7 @@ class MiniPalette extends Component {
 
   deletePalette(e) {
     e.stopPropagation(); //stops link being used
-    this.props.handleDelete(this.props.id);
+    this.props.openDialog(this.props.id);
   }
 
   render() {
