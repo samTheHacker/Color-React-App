@@ -28,6 +28,7 @@ class PaletteList extends Component {
     this.openDialog = this.openDialog.bind(this);
     this.closeDialog = this.closeDialog.bind(this);
     this.handleDelete = this.handleDelete.bind(this);
+    this.handleDefault = this.handleDefault.bind(this);
   }
 
   openDialog(id) {
@@ -40,6 +41,10 @@ class PaletteList extends Component {
 
   goToPalette(id) {
     this.props.history.push(`/palette/${id}`);
+  }
+
+  handleDefault() {
+    window.localStorage.clear();
   }
 
   handleDelete() {
@@ -55,6 +60,7 @@ class PaletteList extends Component {
           <nav className={classes.nav}>
             <h1 className={classes.heading}>React Colours</h1>
             <Link to="/palette/new">Create Palette</Link>
+            <Link onClick={this.handleDefault}>Reset Palette</Link>
           </nav>
           <TransitionGroup className={classes.palettes}>
             {palettes.map(palette => (
