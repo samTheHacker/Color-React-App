@@ -101,6 +101,7 @@ export default {
     right: "0",
     top: "0",
     bottom: "0",
+    zIndex: "-5",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
