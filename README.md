@@ -1,3 +1,4 @@
+## Based on Modern React Bootcamp by Colt Steele
 
 ## Sams big color app
 
